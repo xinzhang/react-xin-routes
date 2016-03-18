@@ -7,6 +7,7 @@ import Layout from './layout/layout.jsx'
 import Home from './pages/home.jsx'
 import About from './pages/about.jsx'
 import Inbox from './pages/inbox.jsx'
+import Contact from './pages/contact.jsx'
 
 import '../css/bootstrap.min.css';
 
@@ -16,6 +17,7 @@ var rootInstance = render((
 	      <IndexRoute component={Home} />
 	      <Route path="about" component={About} />
 	      <Route path="inbox" component={Inbox} />
+	      <Route path="contact" component={Contact} />
 	    </Route>
     </Router>
 ), document.getElementById('main'));

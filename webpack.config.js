@@ -5,7 +5,8 @@ module.exports = {
 	entry: ['./app/routes.jsx'],
 	output: { 
 		path: path.resolve(__dirname, "build"), 
-		filename: 'bundle.js' 
+		filename: 'bundle.js',
+		publicPath: '/build/'
 	},
 	devServer: {
 		cotnentBase: 'web',
@@ -13,16 +14,26 @@ module.exports = {
 		hot: true,
 		inline: true
 	},
+	// plugins: [
+	//     "",
+	//     new webpack.HotModuleReplacementPlugin(),
+	//     new webpack.NoErrorsPlugin()
+	// ],
 	module: {
 		loaders:[{
 			test: /.jsx?$/,
-			loader: 'babel-loader',
+			loader: 'react-hot!babel-loader',
+			//loaders: ["react-hot", "babel-loader"],
+ 			//loaders: ['react-hot', 
+ 			//	'babel?presets[]=es2015,presets[]=react,plugins[]=transform-runtime'
+ 			//],    		
 			exclude: [
 				/node_modules/
-			],
-			query: {
-				presets: ['es2015', 'react']
-			}
+			]
+			//,
+			//query: {
+			//	presets: ['es2015', 'react']
+			//}
 		},
 		{ test: /\.css$/, excludes: [/node_modules/], loader: "style!css" },
 		{ test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },

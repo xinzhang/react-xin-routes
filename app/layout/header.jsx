@@ -10,11 +10,14 @@ let Header = React.createClass({
 						<li className="nav-item active">
 							<Link className="nav-link" to="/">Home</Link>
 						</li>					
-						<li className="nav-item active">
+						<li className="nav-item">
 							<Link className="nav-link" to="/about">About</Link>
 						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/inbox">Inbox0</Link>
+						</li>
 						<li className="nav-item active">
-							<Link className="nav-link" to="/inbox">Inbox</Link>
+							<Link className="nav-link" to="/contact">Contact XZ</Link>
 						</li>
 					</ul>
 				</nav>
